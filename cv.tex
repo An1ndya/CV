@@ -1,0 +1,173 @@
+\documentclass[a4paper,10pt]{article}
+
+%A Few Useful Packages
+\usepackage{marvosym}
+\usepackage{fontspec} 					%for loading fonts
+\usepackage{xunicode,xltxtra,url,parskip} 	%other packages for formatting
+\RequirePackage{color,graphicx}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage[big]{layaureo} 				%better formatting of the A4 page
+% an alternative to Layaureo can be ** \usepackage{fullpage} **
+\usepackage{supertabular} 				%for Grades
+\usepackage{titlesec}					%custom \section
+
+%Setup hyperref package, and colours for links
+\usepackage{hyperref}
+\definecolor{linkcolour}{rgb}{0,0.2,0.6}
+\hypersetup{colorlinks,breaklinks,urlcolor=linkcolour, linkcolor=linkcolour}
+
+%FONTS
+\defaultfontfeatures{Mapping=tex-text}
+%\setmainfont[SmallCapsFont = Fontin SmallCaps]{Fontin}
+%%% modified for Karol Kozioł for ShareLaTeX use
+\setmainfont[
+SmallCapsFont = Fontin-SmallCaps.otf,
+BoldFont = Fontin-Bold.otf,
+ItalicFont = Fontin-Italic.otf
+]
+{Fontin.otf}
+%%%
+
+%CV Sections inspired by: 
+%http://stefano.italians.nl/archives/26
+\titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule]
+\titlespacing{\section}{0pt}{3pt}{3pt}
+%Tweak a bit the top margin
+%\addtolength{\voffset}{-1.3cm}
+
+%Italian hyphenation for the word: ''corporations''
+\hyphenation{im-pre-se}
+
+%-------------WATERMARK TEST [**not part of a CV**]---------------
+\usepackage[absolute]{textpos}
+
+\setlength{\TPHorizModule}{30mm}
+\setlength{\TPVertModule}{\TPHorizModule}
+\textblockorigin{2mm}{0.65\paperheight}
+\setlength{\parindent}{0pt}
+
+%--------------------BEGIN DOCUMENT----------------------
+\begin{document}
+
+%WATERMARK TEST [**not part of a CV**]---------------
+%\font\wm=''Baskerville:color=787878'' at 8pt
+%\font\wmweb=''Baskerville:color=FF1493'' at 8pt
+%{\wm 
+%	\begin{textblock}{1}(0,0)
+%		\rotatebox{-90}{\parbox{500mm}{
+%			Typeset by Alessandro Plasmati with \XeTeX\  \today\ for 
+%			{\wmweb \href{http://www.aleplasmati.comuv.com}{aleplasmati.comuv.com}}
+%		}
+%	}
+%	\end{textblock}
+%}
+
+\pagestyle{empty} % non-numbered pages
+
+\font\fb=''[cmr10]'' %for use with \LaTeX command
+
+%--------------------TITLE-------------
+\par{\centering
+		{\Huge Anindya \textsc{Biswas}
+	}\bigskip\par}
+
+%--------------------SECTIONS-----------------------------------
+%Section: Personal Data
+\section{Personal Information}
+
+\begin{tabular}{rl}
+    \textsc{Place and Date of Birth:} & Khulna, Bangladesh  | 20 October 1997 \\
+    \textsc{Address:}   & House 16, Road 01, Dhaka Real Estate, Mohammadpur, Dhaka-1207 \\
+    \textsc{Phone:}     & +8801721584048\\
+    \textsc{email:}     &  \href{mailto:anindya33046@email.com}{anindya33046@gmail.com}
+\end{tabular}
+
+%Section: Work Experience at the top
+\section{Work Experience}
+\begin{tabular}{r|p{11cm}}
+ \emph{Current} & System Analyst and Software developer \textsc{}  \\\textsc{July 2019}&\emph{KB Group BD}\\&\footnotesize{Developing and maintaining ticketing solution for E-commerce website. Provide functionalities according to client's request. Already done projects with queue-it, Recite-me, Paypal integration, rebrand\\&\url{https://tickets.delfontmackintosh.co.uk/index.asp?ShoID=1085}
+ }\\\multicolumn{2}{c}{} \\
+
+\end{tabular}
+
+%Section: Education
+\section{Education}
+\begin{tabular}{rl}	
+
+
+\textsc{} 2015-2019 & Bachelor of Science in Computer Science and Engineering\\ 
+& \textbf{Bangladesh University of Science and Technology}, Dhaka\\
+& Thesis: ``Building A Knowledge Graph Using Twitter Data'' \\& \small Advisor: Prof. Dr. Muhammad Masroor Ali \\
+&\normalsize \textsc{Gpa}: 2.65/4\\&\\
+
+\textsc{} 2012-2014 & Higher Secondary Certificate in  Science \\
+& \textbf{Govt. M. M. City College}, Khulna\\
+&\normalsize \textsc{Gpa}: 5.00/5\\&\\
+
+\textsc{} 2010-2012 & Secondary School Certificate in  Science \\
+& \textbf{Khulna Zilla School}, Khulna\\
+&\normalsize \textsc{Gpa}: 5.00/5\\&\\
+
+\end{tabular}
+%Section: technical skill
+\section{Technical Skills}
+\begin{tabular}{rl}
+ Programming Language:& \textsc{C/C++}, \textsc{Java}, \textsc{Assembly}, Python\\
+Web development:& \textsc{html}, \textsc{css}, JavaScript, VBscript, jQuery, Ajax, PHP\\
+IDE:& Dreamweaver, Codeblocks, Netbeans, Android Studio, Notepad++\\
+& Microsoft Visual Studio, IntelliJ IDEA\\
+Database: & MySQL, MSSQL, FireBase\\
+Simulator: & Cisco packet Tracer, NACHOS, Proteus, PSpice, AutoCAD\\
+Embedded Systems: & Arduino, Raspberry Pi \\
+Problem Solving :& 230+ Problems solved in Codeforces with max Contest Rating 1414\\
+& \url{https://codeforces.com/profile/an1ndya}\\
+Github URL: & \url{https://github.com/An1ndya}\\
+\end{tabular}
+
+%Section: Scholarships and additional info
+\section{Scholarships and Certificates}
+\begin{tabular}{rl}
+2019 &  Fundamental IT Engineer (FE) Exam Half Passers’ (Afternoon Exam)\\
+ 2015 & BUET Admission test Scholarship\\
+ 2014 &  Ranked 4\textsuperscript{th} position in 6th National Chemistry Olympiad under Senior category \\
+ 2014 & General Board scholarship in H.S.C in Jessore Board \\
+ 2012 & Talent pool Board scholarship in S.S.C in Jessore Board\\
+\end{tabular}
+
+
+\section{UNDERGRADUATE THESIS}
+\begin{tabular}{rl}
+Title &  \textbf{Building A Semantic Knowledge Graph Using Twitter Data}\\
+Description & In this thesis we Creating a Knowledge Graph using Twitter microdata. \\
+& A Knowledge Graph is a representation of human knowledge in the form \\
+& of a graph. Just like any graph, it has nodes (entities), attributes and \\
+& edges (relations). In our KGs entity-relationship edge is assumed as RDF triples \\
+&  like rdf: Subject, rdf: Predicate, rdf: Object. A starting with GATE Developer \\
+& 8.4.1 for analyzing live \\
+& tweets from twitter many processing resources such as ANNIE,\\
+&  Transducer allowed us identifying Token of different kinds. By codding grammar \\
+& rule using JAPE in GATE noun, pronoun were identified which will be used\\
+&  as Node in KGs. For the seek of better semantic analysis and improved relationship\\
+&  between closer entity, development of a process Word Hashing has been done. \\
+\end{tabular}
+
+
+
+\section{Reference}
+\textbf{Dr. Muhammad Masroor Ali} \\
+Professor\\
+Department of Computer Science and Engineering\\
+Bangladesh University of Engineering and Technology\\
+Dhaka-1205, Bangladesh.\\
+mmasroorali@cse.buet.ac.bd
+%Section: Languages
+\section{Languages}
+\begin{tabular}{rl}
+\textsc{Bangla:}&Mother tongue\\
+\textsc{English:}&Fluent\\
+\end{tabular}
+
+\section{Interests and Activities}
+ Travelling, Cycling, Chess, Problem Solving, Reading book, Gaming\\
+
+\end{document}
